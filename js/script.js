@@ -1,4 +1,4 @@
-// ---------- Elements ----------
+// Elements
 const startBtn = document.querySelector('.primary-btn');
 const panel = document.querySelector('.write-panel');
 const closeBtn = document.querySelector('.close-btn');
@@ -10,7 +10,7 @@ const memoryPanel = document.querySelector('.memory-panel');
 const closeMemory = document.querySelector('.close-memory');
 const entriesContainer = document.querySelector('.entries');
 
-// ---------- Helpers ----------
+// Helpers
 function getEntries() {
   return JSON.parse(localStorage.getItem('entries')) || [];
 }
@@ -39,7 +39,7 @@ function renderEntries() {
   });
 }
 
-// ---------- Writing Panel ----------
+//  Writing Panel
 startBtn.addEventListener('click', () => {
   panel.classList.add('show');
   panel.classList.remove('hidden');
@@ -50,7 +50,7 @@ closeBtn.addEventListener('click', () => {
   setTimeout(() => panel.classList.add('hidden'), 400);
 });
 
-// ---------- Save ----------
+//  Save 
 saveBtn.addEventListener('click', () => {
   const text = textarea.value.trim();
   if (!text) return;
@@ -60,7 +60,7 @@ saveBtn.addEventListener('click', () => {
   closeBtn.click();
 });
 
-// ---------- Memory Panel ----------
+//Memory Panel
 memoryBtn.addEventListener('click', () => {
   renderEntries();
   memoryPanel.classList.add('show');
