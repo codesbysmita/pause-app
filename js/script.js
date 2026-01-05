@@ -71,3 +71,33 @@ closeMemory.addEventListener('click', () => {
   memoryPanel.classList.remove('show');
   setTimeout(() => memoryPanel.classList.add('hidden'), 400);
 });
+// Day 5
+
+// Select elements
+const startBtn = document.querySelector('.primary-btn');
+const writePanel = document.querySelector('.write-panel');
+const closeBtn = document.querySelector('.close-btn');
+
+const memoryBtn = document.querySelector('.memory-btn');
+const memoryPanel = document.querySelector('.memory-panel');
+const closeMemoryBtn = document.querySelector('.close-memory');
+
+// Open write panel
+startBtn.addEventListener('click', () => {
+  writePanel.classList.remove('hidden');
+});
+
+// Close write panel
+closeBtn.addEventListener('click', () => {
+  writePanel.classList.add('hidden');
+});
+
+// Open memory panel
+memoryBtn.addEventListener('click', () => {
+  memoryPanel.classList.remove('hidden');
+});
+
+// Close memory panel
+closeMemoryBtn.addEventListener('click', () => {
+  memoryPanel.classList.add('hidden');
+});
