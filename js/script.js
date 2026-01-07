@@ -101,3 +101,31 @@ memoryBtn.addEventListener('click', () => {
 closeMemoryBtn.addEventListener('click', () => {
   memoryPanel.classList.add('hidden');
 });
+
+// Day 6: Save to Local Storage 
+
+// Select elements
+const journalInput = document.getElementById("journalInput");
+const saveBtn = document.getElementById("saveBtn");
+const statusText = document.getElementById("status");
+
+// Load saved entry on page load
+window.addEventListener("load", () => {
+  const savedEntry = localStorage.getItem("pause_entry");
+  if (savedEntry) {
+    journalInput.value = savedEntry;
+  }
+});
+
+// Save entry
+saveBtn.addEventListener("click", () => {
+  const entry = journalInput.value.trim();
+
+  if (entry === "") {
+    statusText.textContent = "Write something first 🌱";
+    return;
+  }
+
+  localStorage.setItem("pause_entry", entry);
+  statusText.textContent = "Saved ✨";
+});
