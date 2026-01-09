@@ -2,59 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pause</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pause</title>
 
-  <! Remix Icons >
+  
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
     rel="stylesheet"
   />
 
-  <!CSS>
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <! App Wrapper >
   <div class="app">
 
-    <!Top Bar>
+    
     <header class="top-bar">
       <h1 class="app-title">Pause</h1>
-      <button class="profile-btn">
-        <i class="ri-user-3-line"></i>
-      </button>
+
+      <div class="top-actions">
+        <button class="memory-btn">
+          <i class="ri-book-open-line"></i>
+        </button>
+
+        <button class="profile-btn">
+          <i class="ri-user-3-line"></i>
+        </button>
+      </div>
     </header>
 
-    <! Main Content >
     <main class="main">
-
-      < Writing Card >
       <section class="card">
         <h2>How are you feeling today?</h2>
         <p>Take a breath. Write it out. Save it.</p>
 
-        <!Writing Panel>
-        <div class="writing-panel">
-          <textarea
-            id="journalInput"
-            placeholder="Start typing your thoughts here..."
-          ></textarea>
-
-          <button class="primary-btn" id="saveBtn">
-            Save entry
-          </button>
-        </div>
+        <button class="primary-btn">
+          Start writing
+        </button>
       </section>
-
-      <! saved entries >
-      <section class="entries">
-        <h3>Your saved thoughts</h3>
-        <div id="entriesList"></div>
-      </section>
-
     </main>
+
   </div>
+
+  <div class="write-panel hidden">
+    <div class="panel-header">
+      <h3>Write freely</h3>
+      <button class="close-btn">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <textarea
+      id="journalInput"
+      placeholder="Type whatever you’re feeling…"
+    ></textarea>
+
+    <button class="save-btn" id="saveBtn">Save entry</button>
+  </div>
+
+  <div class="memory-panel hidden">
+    <div class="panel-header">
+      <h3>Your entries</h3>
+      <button class="close-memory">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <div class="entries" id="entriesList"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
