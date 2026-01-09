@@ -53,3 +53,21 @@ function renderEntries(entries) {
     entriesList.prepend(div);
   });
 }
+// Memory Panel Toggle
+
+// Select memory elements
+const memoryBtn = document.querySelector(".memory-btn");
+const memoryPanel = document.querySelector(".memory-panel");
+const closeMemoryBtn = document.querySelector(".close-memory");
+const writePanel = document.querySelector(".write-panel");
+
+// Open memory panel
+memoryBtn.addEventListener("click", () => {
+  memoryPanel.classList.remove("hidden");
+  writePanel.classList.add("hidden");
+});
+
+// Close memory panel
+closeMemoryBtn.addEventListener("click", () => {
+  memoryPanel.classList.add("hidden");
+});
