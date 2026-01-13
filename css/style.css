@@ -200,10 +200,21 @@ textarea {
   font-size: 0.7rem;
   color: #777;
 }
-
-/* ========================
-   HIDDEN
-======================== */
+/* hidden 
 .hidden {
   display: none;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #777;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: #444;
 }
