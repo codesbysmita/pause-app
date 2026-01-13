@@ -82,3 +82,22 @@ memoryBtn.addEventListener("click", () => {
 closeMemoryBtn.addEventListener("click", () => {
   memoryPanel.classList.add("hidden");
 });
+
+// ===== Day 11: Profile Menu Toggle =====
+
+const profileBtn = document.querySelector(".profile-btn");
+const profileMenu = document.querySelector(".profile-menu");
+
+profileBtn.addEventListener("click", () => {
+  profileMenu.classList.toggle("hidden");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    !profileMenu.contains(e.target) &&
+    !profileBtn.contains(e.target)
+  ) {
+    profileMenu.classList.add("hidden");
+  }
+});
