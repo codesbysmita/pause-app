@@ -41,14 +41,25 @@ function loadEntries() {
 function renderEntries(entries) {
   entriesList.innerHTML = "";
 
-  entries.forEach((entry) => {
+  entries.forEach((entry, index) => {
     const div = document.createElement("div");
     div.classList.add("entry");
 
     div.innerHTML = `
       <p>${entry.content}</p>
       <span>${entry.date}</span>
+      <button class="delete-btn">
+        <i class="ri-delete-bin-line"></i>
+      </button>
     `;
+
+    // Delete logic
+    const deleteBtn = div.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => {
+      entries.splice(index, 1);
+      localStorage.setItem("pauseEntries", JSON.stringify(entries));
+      renderEntries(entries);
+    });
 
     entriesList.prepend(div);
   });
