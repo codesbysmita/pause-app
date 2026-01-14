@@ -2,6 +2,7 @@
 const journalInput = document.getElementById("journalInput");
 const saveBtn = document.getElementById("saveBtn");
 const entriesList = document.getElementById("entriesList");
+const writePanel = document.querySelector(".write-panel");
 
 // Load saved entries when page loads
 window.addEventListener("DOMContentLoaded", loadEntries);
@@ -24,6 +25,9 @@ saveBtn.addEventListener("click", () => {
 
   journalInput.value = "";
   renderEntries(entries);
+
+  // auto close
+  writePanel.classList.add("hidden");
 });
 
 // Get entries from localStorage
@@ -64,13 +68,12 @@ function renderEntries(entries) {
     entriesList.prepend(div);
   });
 }
-// Memory Panel Toggle
 
-// Select memory elements
+// Memory panel toggle
+
 const memoryBtn = document.querySelector(".memory-btn");
 const memoryPanel = document.querySelector(".memory-panel");
 const closeMemoryBtn = document.querySelector(".close-memory");
-const writePanel = document.querySelector(".write-panel");
 
 // Open memory panel
 memoryBtn.addEventListener("click", () => {
@@ -83,7 +86,7 @@ closeMemoryBtn.addEventListener("click", () => {
   memoryPanel.classList.add("hidden");
 });
 
-// ===== Day 11: Profile Menu Toggle =====
+// Profile menu toggle
 
 const profileBtn = document.querySelector(".profile-btn");
 const profileMenu = document.querySelector(".profile-menu");
