@@ -35,7 +35,7 @@ function getEntries() {
   return JSON.parse(localStorage.getItem("pauseEntries")) || [];
 }
 
-// Load entries on refresh
+// Load entries on Refresh
 function loadEntries() {
   const entries = getEntries();
   renderEntries(entries);
