@@ -5,68 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pause</title>
 
-  
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-  />
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="app">
 
-    
+    <!-- Top Bar -->
     <header class="top-bar">
       <h1 class="app-title">Pause</h1>
 
-      <div class="top-actions">
+      <div class="actions">
         <button class="memory-btn">
           <i class="ri-book-open-line"></i>
         </button>
-
         <button class="profile-btn">
           <i class="ri-user-3-line"></i>
         </button>
-
-<!-- Profile Dropdown -->
-<div class="profile-menu hidden">
-  <button class="menu-item">
-    <i class="ri-settings-3-line"></i>
-    Settings
-  </button>
-
-  <button class="menu-item">
-    <i class="ri-pencil-line"></i>
-    Edit profile
-  </button>
-
-  <button class="menu-item">
-    <i class="ri-logout-box-line"></i>
-    Log out
-  </button>
-
-  <p class="credit">made by s.</p>
-</div>
-
       </div>
     </header>
 
+    <!-- Main Card -->
     <main class="main">
       <section class="card">
         <h2>How are you feeling today?</h2>
         <p>Take a breath. Write it out. Save it.</p>
 
-        <button class="primary-btn">
+        <button class="primary-btn" id="startWriting">
           Start writing
         </button>
       </section>
     </main>
-
   </div>
 
+  <!-- Writing Panel -->
   <div class="write-panel hidden">
     <div class="panel-header">
       <h3>Write freely</h3>
@@ -75,14 +50,12 @@
       </button>
     </div>
 
-    <textarea
-      id="journalInput"
-      placeholder="Type whatever you’re feeling…"
-    ></textarea>
+    <textarea id="journalInput" placeholder="Type whatever you’re feeling…"></textarea>
 
     <button class="save-btn" id="saveBtn">Save entry</button>
   </div>
 
+  <!-- Memory Panel -->
   <div class="memory-panel hidden">
     <div class="panel-header">
       <h3>Your entries</h3>
