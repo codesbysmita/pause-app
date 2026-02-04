@@ -1,6 +1,8 @@
 🌿 Pause,  a mindful journaling app
 Pause is a simple, calming journaling web app built to help you slow down, reflect, and write without pressure.
-
+[![Visitors](https://hits.sh/github.com/codesbysmita/QuickQR.svg?style=for-the-badge&label=VISITORS&color=6C63FF)](https://github.com/codesbysmita/QuickQR)
+[![GitHub stars](https://img.shields.io/github/stars/codesbysmita/QuickQR?style=for-the-badge&color=FFD700&label=STARS)](https://github.com/codesbysmita/QuickQR/stargazers)
+![Built with HTML, CSS, JS](https://img.shields.io/badge/Built%20with-HTML%20%7C%20CSS%20%7C%20JS-6C63FF?style=for-the-badge)
 This project started as a learning-by-building experiment and will continue to evolve as I learn more about web development.
 
 ✨ Features (current)
